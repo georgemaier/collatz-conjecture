@@ -21,7 +21,7 @@ using namespace std::chrono_literals;
 //              - multi-threading (4 threads)
 //              - utilising known pathway lengths to reduce clock cycles 
 //                  (e.g. if 100 is halved to 50, and the length from 50 to 1 is already known, we can simply add this length)
-//              - Calculating in blocks means system memory usage is kept relatively low, which can improve performance. 
+//              - Calculating in blocks means system memory usage can be controlled and overflows avoided. 
 //
 //          This code was produced on a Early 2015 13-inch MacbookPro (i5 2-core, 8gb ram)
 //          It was written in the XCode IDE using the Intel C++ Compiler for testing. 
