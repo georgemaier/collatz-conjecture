@@ -10,15 +10,18 @@
 using namespace std::this_thread;
 using namespace std::chrono_literals;
 
-//  NOTE:   This code uses a logic whereby it calculates the length of Collatz Conjecture pathways for numbers between 1 and n, where n is given as the length of a 
-//          calculation block (var named endvalue) multiplied by the number of blocks (var named numberofblocks). 
+//  NOTE:   This code uses a logic whereby it calculates the length of Collatz Conjecture pathways for numbers between 1 and n.
+//          n is given as the length of a calculation block (var named endvalue) multiplied by the number of blocks (var named numberofblocks). 
 //          For example, to calc for 1 to 10,000,000 you might wish to run 10 blocks of 1,000,000. 
 //          The Collatz Conjecture pathway is a series of: if n is even, n = n/2, if n is odd, n = (3*n)+1.
 //          The length is the number of iterations needed to reach the number 1 for each start value. 
 //          Calculation is conducted in blocks to avoid overloading system memory. 
 //          After each block, the findings are added to a csv file. 
-//          This code includes a number of speed oriented features such as multi-threading...
-//          ... and utilising known pathway lengths to dramatically reduce clock cycles. 
+//          This code includes a number of speed oriented features such as: 
+//              - multi-threading (4 threads)
+//              - utilising known pathway lengths to reduce clock cycles 
+//                  (e.g. if 100 is halved to 50, and the length from 50 to 1 is already known, we can simply add this length)
+//              - Calculating in blocks means system memory usage is kept relatively low, which can improve performance. 
 //          Please read all of the warnings below. 
 
 //  !!! WARNINGS !!!
