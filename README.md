@@ -4,9 +4,9 @@ This is a threaded C++ algorithm that calculates the iteration length of Collatz
 
 This code includes a number of speed oriented features such as: 
 
-- multi-threading (4 threads)
+- Multi-threading (4 threads)
 
-- utilising known pathway lengths to reduce clock cycles (e.g. if 100 is halved to 50, and the length from 50 to 1 is already known, we can simply add this length)
+- Utilising known pathway lengths to reduce clock cycles (e.g. if 100 is halved to 50, and the length from 50 to 1 is already known, we can simply add this length)
 
 - Calculating in blocks means system memory usage can be controlled and overflows avoided. 
 
