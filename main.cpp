@@ -14,7 +14,7 @@ using namespace std::chrono_literals;
 //          calculation block (var named endvalue) multiplied by the number of blocks (var named numberofblocks). 
 //          For example, to calc for 1 to 10,000,000 you might wish to run 10 blocks of 1,000,000. 
 //          The Collatz Conjecture pathway is a series of: if n is even, n = n/2, if n is odd, n = (3*n)+1.
-//          For the length is the number of iterations needed to reach the number 1 for each start value. 
+//          The length is the number of iterations needed to reach the number 1 for each start value. 
 //          Calculation is conducted in blocks to avoid overloading system memory. 
 //          After each block, the findings are added to a csv file. 
 //          This code includes a number of speed oriented features such as multi-threading...
