@@ -22,6 +22,9 @@ using namespace std::chrono_literals;
 //              - utilising known pathway lengths to reduce clock cycles 
 //                  (e.g. if 100 is halved to 50, and the length from 50 to 1 is already known, we can simply add this length)
 //              - Calculating in blocks means system memory usage is kept relatively low, which can improve performance. 
+//
+//          This code was produced on a Early 2015 13-inch MacbookPro (i5 2-core, 8gb ram)
+//          It was written in the XCode IDE using the Intel C++ Compiler for testing. 
 //          Please read all of the warnings below. 
 
 //  !!! WARNINGS !!!
@@ -29,7 +32,6 @@ using namespace std::chrono_literals;
 //  If you are running this code for the first time you may wish to set endvalue to a small number (e.g. 500) to test memory usage on your system.
 //  Please note that large values of endvalue (block length) and numberofblocks (the number of blocks) will result in a very large file being produced.
 //  If you do not change these values, the output file will be many gigabytes in length. Make sure you have at least 20gb if you intend to run as is.
-//  This code is produced on a MacbookPro 13-inch Early 2015.
 //  This code will attempt to run 4 threads.
 
 
