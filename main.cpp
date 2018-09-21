@@ -13,7 +13,7 @@ using namespace std::chrono_literals;
 //  NOTE:   This code uses a logic whereby it calculates the length of Collatz Conjecture pathways for numbers between 1 and n.
 //          n is given as the length of a calculation block (var named endvalue) multiplied by the number of blocks (var named numberofblocks). 
 //          For example, to calc for 1 to 10,000,000 you might wish to run 10 blocks of 1,000,000. 
-//          The Collatz Conjecture pathway is a series of: if n is even, n = n/2, if n is odd, n = (3*n)+1.
+//          The Collatz Conjecture pathway is a series of: if n is even, n = n/2; else if n is odd, n = (3*n)+1.
 //          The length is the number of iterations needed to reach the number 1 for each start value. 
 //          Calculation is conducted in blocks to avoid overloading system memory. 
 //          After each block, the findings are added to a csv file. 
@@ -22,6 +22,8 @@ using namespace std::chrono_literals;
 //              - utilising known pathway lengths to reduce clock cycles 
 //                  (e.g. if 100 is halved to 50, and the length from 50 to 1 is already known, we can simply add this length)
 //              - Calculating in blocks means system memory usage can be controlled and overflows avoided. 
+//              - Mathematically, 3n+1 on an odd number always results in an even result, meaning the operation can be combined
+//                  with the resultant need to divide by two. Thus, 3n+1 becomes (3n+1)/2 and an additional process cycle is avoided. 
 //
 //          This code was produced on a Early 2015 13-inch MacbookPro (i5 2-core, 8gb ram)
 //          It was written in the XCode IDE using the Intel C++ Compiler for testing. 
