@@ -12,6 +12,6 @@ This code includes a number of speed oriented features such as:
 
 - Mathematically, 3n+1 on an odd number always results in an even result, meaning the operation can be combined with the resultant need to divide by two. Thus, 3n+1 becomes (3n+1)/2 and an additional process cycle is avoided. 
 
-Detailed comments are provided within the main cpp file - they should statasfy your curiosities. 
+Detailed comments are provided within the main cpp file - they should satisfy your curiosities. 
       Kindest regards, 
         George
